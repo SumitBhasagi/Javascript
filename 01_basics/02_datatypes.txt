@@ -1,0 +1,10 @@
+DataTypes 
+
+
+Javascript ke old version aaur new version bohot difference hain 
+purane version me classes, module, arrow functions ye kuch bhi nahi tha jo abhi newer version mein hain 
+
+toh Javascript ka bohot sara code jo hain wo older version mein likha hua hain lekin apne ko toh newer version chahiye 
+toh usliye Javascriptnke file mein first line prr "use strict" likhna padta hain jisse server ko pata chalta hain ki yeh particular code Javascript ke new version mein likha hua hain 
+
+

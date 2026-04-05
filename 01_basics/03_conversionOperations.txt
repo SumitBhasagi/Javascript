@@ -1,0 +1,48 @@
+
+
+ECMA International ek organization hai jo standards banati hai
+ECMAScript (ES) = JavaScript ka official standard / rules ka set
+
+JavaScript = implementation
+ECMAScript = uska rulebook 📘
+
+KYU ?
+
+Pehle alag-alag browsers mein JS alag behave karta th
+Phir ECMAScript aaya → sabko ek standard follow karna pada
+
+Result:
+✔️ Same code har browser mein same kaam karega
+
+
+////////////////////////////////////////////////////////////////////////////////////////////////////
+
+
+Conversion Operations kya hote hain?
+
+👉 Jab JavaScript ek data type ko dusre data type mein convert karta hai usse bolte hain Type Conversion
+
+     📌 2 Types hote hain:
+        1️⃣ Implicit Conversion (Automatic 😏)
+
+          👉 JS khud se conversion karta hai
+
+        2️⃣ Explicit Conversion (Manual 💪)
+
+          👉 Tu khud conversion karta hai
+
+
+🔥 1. Implicit Conversion (Type Coercion)
+
+👉 JavaScript automatically type change karta hai  
+    Example 1: console.log("5" + 2);
+
+    Example 2: console.log("5" - 2);  
+
+Yaad Rakhna-->  
+  | Operation	      |         Result       |
+  |     +	          |   String banata hai  |
+  |   -, *, /	      |   Number banata hai  |
+
+
+  

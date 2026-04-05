@@ -1,0 +1,199 @@
+Bhai 🔥 ye pura code **JavaScript comparisons + type coercion ka gold topic** hai (interview favourite 😏)
+Main tujhe **line-by-line clear explanation** deta hoon — bilkul confusion-free 💯
+
+---
+
+# 🔹 1. Basic Comparisons (Simple hai)
+
+```js
+console.log(2 > 1);   // true
+console.log(2 >= 1);  // true
+console.log(2 < 1);   // false
+console.log(2 == 1);  // false
+console.log(2 != 1);  // true
+```
+
+👉 Ye sab **normal number comparisons** hain
+👉 Koi type conversion nahi ho raha
+
+✔️ Straightforward logic:
+
+* `>` greater than
+* `>=` greater than equal
+* `<` less than
+* `==` equal
+* `!=` not equal
+
+---
+
+# 🔹 2. String vs Number Comparison (Important 🔥)
+
+```js
+console.log("2" > 1);   // true
+```
+
+👉 `"2"` string hai
+👉 JS isko number mein convert karega → `2 > 1` → **true**
+
+---
+
+```js
+console.log(2 > "1");   // true
+```
+
+👉 `"1"` → number ban gaya
+👉 `2 > 1` → **true**
+
+---
+
+```js
+console.log("02" > 1);  // true
+```
+
+👉 `"02"` → convert to number → `2`
+👉 `2 > 1` → **true**
+
+---
+
+## 💡 Rule:
+
+👉 Jab **string aur number compare hote hain**,
+👉 JS string ko **number mein convert karta hai**
+
+---
+
+# 🔥 3. `null` ke saath comparison (MOST CONFUSING 😵)
+
+```js
+console.log(null > 0);   // false
+```
+
+👉 `null` → number conversion → `0`
+👉 `0 > 0` → **false**
+
+---
+
+```js
+console.log(null == 0);  // false
+```
+
+👉 Yaha special rule hai 😏
+👉 `null` **sirf equal hota hai `undefined` ke**
+👉 Isliye → **false**
+
+---
+
+```js
+console.log(null >= 0);  // true
+```
+
+👉 `null` → 0
+👉 `0 >= 0` → **true**
+
+---
+
+## 💣 Important Concept:
+
+👉 `==` aur comparison (`>`, `<`) alag behave karte hain
+
+👉 `null == 0` ❌
+👉 but `null >= 0` ✅
+
+---
+
+# 🔥 4. `undefined` ke saath comparison
+
+```js
+console.log(undefined == 0);   // false
+```
+
+👉 `undefined` kisi number ke equal nahi hota
+
+---
+
+```js
+console.log(undefined <= 0);   // false
+console.log(undefined >= 0);   // false
+```
+
+👉 `undefined` → number banega → `NaN`
+👉 Aur `NaN` kisi se compare nahi hota ❌
+
+---
+
+## 💡 Rule:
+
+👉 `undefined` ke saath koi comparison → mostly **false**
+
+---
+
+# 🔥 5. Strict Equality (`===`) vs Loose (`==`)
+
+```js
+console.log("2" === 2);  // false
+```
+
+👉 `"2"` string hai
+👉 `2` number hai
+
+👉 `===` type bhi check karta hai ❌
+👉 Isliye → **false**
+
+---
+
+```js
+console.log("2" === "2");  // true
+```
+
+👉 Dono string hai
+👉 Same value + same type ✅
+👉 Result → **true**
+
+---
+
+# 🧠 Golden Rule (Yaad rakhna 💯)
+
+👉 `==` → sirf value check karta hai (type convert karta hai)
+👉 `===` → value + type dono check karta hai (no conversion)
+
+---
+
+# 💣 Final Summary (Exam + Interview 🔥)
+
+👉 `"2" > 1` → true (string → number)
+👉 `null == 0` → false (special rule)
+👉 `null >= 0` → true (numeric conversion)
+👉 `undefined` → always false in comparison
+👉 `===` → safest (no confusion)
+
+---
+
+# 💡 Best Practice:
+
+👉 Hamesha use karo:
+
+```js
+===   // strict equality
+```
+
+👉 Avoid karo:
+
+```js
+==    // confusing hai 😵
+```
+
+---
+
+# 🧪 Challenge (try kar 😏)
+
+Predict output:
+
+```js
+console.log("5" == 5);
+console.log("5" === 5);
+console.log(null == undefined);
+console.log(null === undefined);
+```
+
+---
+

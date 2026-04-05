@@ -1,0 +1,54 @@
+// Dates in JavaScript
+
+let myDate = new Date();
+console.log(myDate); // output --> 2026-04-05T20:20:28.911Z --> current date and time dikhayega
+
+console.log(myDate.toString()); // output --> Mon Apr 06 2026 01:51:25 GMT+0530 (India Standard Time) --> ye format mein time dikhayega
+
+console.log(myDate.toDateString()); // output --> Mon Apr 06 2026 --> ye format mein time dikhayega
+
+console.log(typeof myDate); // output --> object --> Date is an Object
+
+let myCreatedDate = new Date(2005, 2, 20);
+console.log(myCreatedDate); // output --> 2005-03-19T18:30:00.000Z
+
+console.log(myCreatedDate.toDateString()); // output -->  Sun Mar 20 2005 --> JS main months ka index 0 se start hote hain
+
+console.log(myCreatedDate.toLocaleDateString()); // output --> 20/3/2005
+
+let newDate = new Date(2005, 2, 20, 6, 45); // ye format mein time bhi dikhai dega like below shown
+
+console.log(newDate.toLocaleString()); // output --> 20/3/2005, 6:45:00 am
+
+let date1 = new Date("03-20-2005"); // "mm-dd-yyyy"
+console.log(date1.toLocaleString()); // output --> 20/3/2005, 12:00:00 am
+
+let myTimeStamp = Date.now();
+console.log(myTimeStamp); // output --> 1775422170810
+
+console.log(myCreatedDate.getTime()); // output --> 1111257000000
+
+console.log(Math.floor(Date.now() / 1000));
+
+// niche ke sare functions current time values deti hain apne requirements ke sath
+let newDate1 = new Date();
+console.log(newDate1);
+console.log(newDate1.getMonth());
+console.log(newDate1.getDay());
+console.log(newDate1.getHours());
+console.log(newDate1.getFullYear());
+console.log(newDate1.getMilliseconds());
+console.log(newDate1.getMinutes());
+
+// ye samjho acche se 
+
+console.log(
+  newDate1.toLocaleString("default", {
+    weekday: "long",
+    year: "numeric",
+    month: "long",
+    day: "numeric",
+  }),
+);      // output  --> Monday, 6 April 2026 
+
+console.log(newDate1);

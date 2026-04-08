@@ -1,1 +1,45 @@
 Arrays
+
+here we learned 
+1. how to create an array in js 
+--> const myArr = [0, 1, 2, 3, 4, 5];
+
+    const myarr = [0, 1, 2, 3, 4, 5, true, sumit];  // he pn valid array aahe
+
+    const myHeros = ["Shaktiman", "doga", "naagraj"];
+
+    const myArray2 = new Array(1, 2, 3, 4);   <--- //////////// see this
+
+
+2. how to insert and delete  elements in any array 
+-->[2.1] myArr.push(25); // will insert element 25 in the aaray at last position
+   
+   [2.2] myArr.pop(); // This will delete the last element fromt the array 
+
+   [2.3] myArr.unshift(2500); // .unshift(x) -->  it will insert the element 2500 at the first position of your array
+    
+   [2.4] myArr.shift(); // .shift() -->  it will remove the element from the first position
+
+3. Implemented built-in functions on array  
+--> i. console.log(myArr.includes(25)); 
+       
+       .includes(x) --> it will return the boolean answer for an element present in an array or not ?
+
+    ii. console.log(myArr.indexOf(25));  
+        
+       .indexOf(x) --> it will return the index of an element
+
+    iii.const newArr = myArr.join(); 
+    
+       .join() --> converts all the elements of the array into string
+
+    iv. const myn1 = myArr.slice(1, 3); 
+    
+       .slice(x,y) --> it will print the array from index x to y-1 
+    
+    v. const myn2 = myArr.splice(1, 3); 
+    
+       .splice(x,y) --> it will print and remove the elements from the array from index x to y
+
+  
+

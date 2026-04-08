@@ -1,0 +1,13 @@
+// aarays
+
+// const myarr = [0, 1, 2, 3, 4, 5, true, sumit];  // he pn valid array aahe
+
+const myArr = [0, 1, 2, 3, 4, 5];
+
+console.log(myArr[0]);
+
+
+// shallow copies --> share the same reference points
+
+//deep copies --> do not share the same reference 
+

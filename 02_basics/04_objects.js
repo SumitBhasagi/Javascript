@@ -57,23 +57,57 @@ const users = [
 ];
 
 users[1].email;
-
-console.log(tinderUser);
+//console.log(tinderUser);
 
 // ++++ Object.keys(obj_name) +++++
 
-console.log(Object.keys(tinderUser)); // ye function object ke keys ka array banake return karta hain ,  output --> [ 'id', 'name', 'isLoggedIn' ]
+//console.log(Object.keys(tinderUser)); // ye function object ke keys ka array banake return karta hain ,  output --> [ 'id', 'name', 'isLoggedIn' ]
 
 // ++++ Object.values(obj_name) ++++
-console.log(Object.values(tinderUser)); // ye function object ke saare values ka array banake return karta hain , output --> [ '123abc', 'sammy', 'true' ]
+//console.log(Object.values(tinderUser)); // ye function object ke saare values ka array banake return karta hain , output --> [ '123abc', 'sammy', 'true' ]
 
 // ++++ Object.entries(obj_name) ++++
-console.log(Object.entries(tinderUser)); // ye function object ke sare key-value pair ko single single array mein convert krke saare arrays ko ek aaray mein insert krke return krta hain,       output --> [ [ 'id', '123abc' ], [ 'name', 'sammy' ], [ 'isLoggedIn', 'true' ] ]
+//console.log(Object.entries(tinderUser)); // ye function object ke sare key-value pair ko single single array mein convert krke saare arrays ko ek aaray mein insert krke return krta hain,       output --> [ [ 'id', '123abc' ], [ 'name', 'sammy' ], [ 'isLoggedIn', 'true' ] ]
 // Yaha pe 1st entry in array "key" rahegi fir 2nd entry uski "value"
 
 // ++++ obj_name.hasOwnProperty("property_name") ++++
-console.log(tinderUser.hasOwnProperty("isLoggedIn")); // Property name mtlb object ka key
+//console.log(tinderUser.hasOwnProperty("isLoggedIn")); // Property name mtlb object ka key
 
 // .hasOwnProperty() --> boolean value return karta hain ki particular key uss object me present hain/ uss object se belong krti hain yaa nahi ?
 
-//
+// +++++ Destructuring +++++++ //
+
+const course = {
+  coursename: "js in hindi",
+  price: "999",
+  courseInstructor: "prakash sakaria",
+};
+
+// to take and access the properties of the objects we have 2 general methods which are
+// 1. course.courseInstructor
+// 2. course[courseInstructor]
+
+// assume there is a situation where we have to access the same property again & again then the code will get enlarge in number of lines and it is not good practices in JS
+
+// So to do such type of repitative access and reduce the redundancy of code
+// we use Destructuring*
+// this is how we do destructuring, here we can also rename a particular property with shotcuts
+
+const { courseInstructor } = course;
+const { courseInstructor: teacher } = course;
+
+console.log(teacher);
+
+
+// hitesh tried to explain destructuring in react using below array function 
+// const nvabar = ({ company }) => {};
+
+// nvabar((company = "hitesh"));
+
+
+// this is a type of json object 
+// {
+//   "name": "sumit",
+//   "coursename": "JS in Hindi",
+//   "price": "free"
+// }

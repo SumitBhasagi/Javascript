@@ -40,4 +40,119 @@ let result = add(5, 10);
 console.log(result);
 ___________________________________________________________
 
+// TYPES OF FUNCTIONS IN JS +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 
+1. Named Function +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+   A function that has its own name when declared. It’s easy to reuse and debug because the name shows up in error messages or stack traces
+    _______________________________________________________
+           function greet() {
+             return "Hello!";
+           }
+           console.log(greet());
+    _______________________________________________________
+
+2. Anonymous Function++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+   A function that does not have a name. It is usually assigned to a variable or used as a callback. Since it has no name, it cannot be called directly.
+    _______________________________________________________
+           const greet = function() {
+             return "Hi there!";
+           };
+           console.log(greet());
+    _______________________________________________________
+
+3. Function Expression ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+   When you assign a function (can be named or anonymous) to a variable. The function can then be used by calling that variable.
+
+   _______________________________________________________
+          const add = function(a, b) {
+             return a + b;
+          };
+         console.log(add(2, 3));
+   _______________________________________________________
+
+4. Arrow Function (ES6) ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+   A new way to write functions using the => syntax. They are shorter and do not have their own this binding, which makes them useful in some cases. 
+   _______________________________________________________
+   const square = n => n * n;
+   console.log(square(4));
+   _______________________________________________________
+
+5. Immediately Invoked Function Expression (IIFE) +++++++++++++++++++++++++++++++++++++++++++++++++
+   IIFE functions are executed immediately after their definition. They are often used to create isolated scopes.
+  _______________________________________________________
+    (function () {
+      console.log("This runs immediately!");
+    })();
+  _______________________________________________________
+
+6. Callback Functions ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+   A callback function is passed as an argument to another function and is executed after the completion of that function. 
+  _______________________________________________________
+     function num(n, callback) {
+            return callback(n);
+        }
+    const double = (n) => n * 2;
+    console.log(num(5, double));
+  _______________________________________________________ 
+
+7. Constructor Function ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+   A special type of function used to create multiple objects with the same structure. It’s called with the new keyword.
+   _______________________________________________________
+   function Person(name, age) {
+        this.name = name;
+        this.age = age;
+      }
+      const user = new Person("Neha", 22);
+      console.log(user.name);
+   _______________________________________________________
+
+8. Async Function  ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+   Functions that handle asynchronous tasks. Declared with async, they return a Promise, and you can use await inside them to pause until another Promise resolves.
+  _______________________________________________________
+    async function fetchData() {
+      return "Data fetched!";
+      }
+    fetchData().then(console.log);
+  _______________________________________________________
+
+9. Generator Function ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+   Declared with an asterisk *, these functions can pause execution using yield and resume later. Useful for lazy loading values or handling iterators.
+   _______________________________________________________
+      function* numbers() {
+             yield 1;
+             yield 2;
+             yield 3;
+           }
+
+        const gen = numbers();
+        console.log(gen.next().value); 
+        console.log(gen.next().value);
+   _______________________________________________________
+
+10. Rest Parameter Function
+      Uses ... to collect all remaining arguments into an array. Very useful when you don’t know how many arguments will be passed.
+   _______________________________________________________
+           function sum(...nums) {
+             return nums.reduce((a, b) => a + b, 0);
+         }
+           console.log(sum(1, 2, 3, 4));
+   _______________________________________________________
+
+11. Default Parameter Function
+    A function where parameters have default values if no argument is passed. Helps avoid undefined issues.
+    _______________________________________________________
+    function greet(name = "Guest") {
+       return "Hello, " + name; 
+     }
+    console.log(greet());
+    console.log(greet("Aman")); 
+    _______________________________________________________
+
+12. Pure Functions
+    Pure functions return the same output for the same inputs and do not produce side effects. They do not modify state outside their scope, such as modifying global variables, changing the state of objects passed as arguments, or performing I/O operations.
+  _______________________________________________________
+       function pureAdd(a, b) {
+             return a + b;
+          }
+      console.log(pureAdd(2, 3));
+  _______________________________________________________
